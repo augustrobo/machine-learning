@@ -1,6 +1,7 @@
 ##modify the code from Machine Learning in Python
 ##simple binary decision trees with different depths
 
+
 import numpy as np
 import pandas as pd
 from urllib.request import urlopen
@@ -8,10 +9,9 @@ from sklearn import tree
 from sklearn.tree import DecisionTreeRegressor
 import matplotlib.pyplot as plt
 
-xx = np.arange(-0.5, 0.5, 0.01)
-y = [s + np.random.normal(0.1) for s in xx]
-#x is a list of lists
-x = [[s] for s in xx]
+n_points = 100
+x = np.arange(- 0.5, 0.5, 1/n_points)[:, np.newaxis]
+y = x.ravel() + np.random.normal(0, 0.1, n_points)
 
 simpleTree1 = DecisionTreeRegressor(max_depth = 1)
 simpleTree1.fit(x, y)
