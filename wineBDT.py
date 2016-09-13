@@ -9,7 +9,7 @@ from sklearn.tree import DecisionTreeRegressor, export_graphviz
 import matplotlib as plt
 import graphviz as gv
 
-##read data into pd
+##read data
 ##url address
 target_url = ("http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv")
 data = pd.read_table(urlopen(target_url), sep = ";")
