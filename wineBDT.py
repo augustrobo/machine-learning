@@ -6,7 +6,7 @@ import pandas as pd
 from urllib.request import urlopen
 from sklearn import tree
 from sklearn.tree import DecisionTreeRegressor, export_graphviz
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import graphviz as gv
 
 ##read data
